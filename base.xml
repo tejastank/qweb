@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="template" xml:space="preserve">
+<t t-name="main">
+    <div class="container" style="float:left;margin-left:200px;width:800px;">
+        <div class="view_list_note" style="float:left;width:250px;">
+            <ul class="list-actions">
+                <li><a href="#" action="add" >ADD</a></li>
+                <li><a href="javascript:void(0);" action="remove">Remove</a></li>
+            </ul>
+
+            <ul class="list-records">                        
+            </ul>
+        </div>
+        <div class="view_content" style="float:right;width:500;">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <input class="field" type="hidden" name="id" size="50" cols="40" style="width:100%;" value="false"/>
+                        <input class="field" type="text" name="title" size="50" cols="40" style="width:100%;"/>
+                    </td>
+                </tr>                
+                <tr>
+                    <td>
+                        <textarea class="field" name="content" cols="66" rows="35"></textarea>   
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</t>
+</template>
