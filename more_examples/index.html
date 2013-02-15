@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>qweb test</title>
+	<script type="text/javascript" src="jquery.pack.js"></script>
+	<script type="text/javascript" src="template.js"></script>
+	<script type="text/javascript">
+        QWeb.add_template("template.xml");
+        
+	    $(function(){
+		
+	        // # example 1, simple template for variable rendering, show message
+		    var data = {'name': 'tejas tank'};
+		    var tmp = QWeb.render("message", data);
+		    $("#screen1").append(tmp);
+		
+	        // # example 2, simple template for variable rendering, show list
+		    data['records'] = [ {'name': 'tejas tank'},
+		                            {'name': 'pratik tank'},
+		                            {'name': 'vajju tank'},
+		                            {'name': 'alpesh tank'},
+	                              ];
+		    var tmp = QWeb.render("list", data);
+		    $("#screen2").append(tmp);
+		
+	        // # example 3, simple template for variable rendering, show table
+		    data['records'] = [ {'name': 'tejas ', 'surname':'tank'},
+	                            {'name': 'pratik ', 'surname':'tank'},
+	                            {'name': 'vajju ', 'surname':'tank'},
+	                            {'name': 'alpesh ', 'surname':'tank'},
+	                            {'name': 'tejas ', 'surname':'tank'},
+	                            {'name': 'pratik ', 'surname':'tank'},
+	                            {'name': 'vajju ', 'surname':'tank'},
+	                            {'name': 'alpesh ', 'surname':'tank'},
+	                            {'name': 'tejas ', 'surname':'tank'},
+	                            {'name': 'pratik ', 'surname':'tank'},
+	                            {'name': 'vajju ', 'surname':'tank'},
+	                            {'name': 'alpesh ', 'surname':'tank'},
+                              ];
+		    var tmp = QWeb.render("table", data);
+		    $("#screen3").append(tmp);		
+		
+	    });
+	</script>
+</head>
+<body>
+    <div id="screen1"></div>
+    <div id="screen2"></div>
+    <div id="screen3"></div>
+</body>
+</html>

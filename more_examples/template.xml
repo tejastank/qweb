@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views id="template" xml:space="preserve">
+	<t t-name="message">
+	    <!--t t-js="name">console.log("debug 1 : ",name);</t-->		
+		<div class="message"><t t-esc="name"/></div>
+	</t>
+	
+	<t t-name="list">
+		<ul>
+		    <t t-foreach="records" t-as="record">
+		        <li><t t-esc="record.name"/></li>
+		    </t>
+		</ul>
+	</t>
+	
+	<t t-name="table">
+		<table border="1">
+		    <tr><th>Name</th><th>Surname</th></tr>		    		    
+		    <t t-foreach="records" t-as="record">
+		        <tr><td><t t-esc="record.name"/></td><td><t t-esc="record.surname"/></td></tr>
+		    </t>
+		</table>
+	</t>
+	
+</views>
