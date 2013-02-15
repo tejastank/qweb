@@ -1,3 +1,8 @@
+Note:@tejas tank.
+-----------------
+In more_examples directory, I have added simplest example to use it for javascript.
+
+
 What is QWeb ?
 --------------
 QWeb is web framework (mainly an XML templating system) implemented in various laguages.
